@@ -29,7 +29,7 @@ jobs:
           
       - name: Show directory
         run: |
-          ls -la dist/testing-mat2/browser
+          ls -la dist/unit-testing/browser
 
       - name: Download and run httpd image, container name serving_base_master
         run: |
@@ -41,7 +41,7 @@ jobs:
           
       - name: Copy Angular build to container
         run: |
-          docker cp dist/testing-mat2/browser/. serving_base_master:/usr/local/apache2/htdocs
+          docker cp dist/unit-testing/browser/. serving_base_master:/usr/local/apache2/htdocs
 
       - name: List files in container
         run: |
